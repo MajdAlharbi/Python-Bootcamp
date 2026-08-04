@@ -75,3 +75,7 @@ I created Python programs that:
 - Read two numbers from the user
 - Added the numbers
 - Used functions to organize the code
+
+  Related Repository
+🔗 Unit 1 Project
+https://github.com/MajdAlharbi/project-unit1
