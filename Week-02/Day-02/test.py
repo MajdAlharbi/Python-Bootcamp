@@ -58,3 +58,4 @@ else:
     print("Index is out of bounds.")
 
 print(type(len(teacher_name)))
+
