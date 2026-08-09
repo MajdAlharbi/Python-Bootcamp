@@ -54,18 +54,41 @@ while count < 5:
     print(f"count.. {count}")
 print("Loop completed")
 
-# lab 10
-age_text = input("please enter your age: ").strip()
+# # lab 10
+# age_text = input("please enter your age: ").strip()
 
-while not age_text.isdigit():
-    age_text = input("please enter your age: ").strip()
+# while not age_text.isdigit():
+#     age_text = input("please enter your age: ").strip()
 
-    age = int(age_text)
-    print(f"you are: {age}")
+#     age = int(age_text)
+#     print(f"you are: {age}")
 
-# lab 10
-password = "python"
-print("please Enter your password: ")
+# lab 11
+# password = ""
+# password = input(print("please Enter your password "))
 
-while password != "":
-    password = input("enter your password: ")
+# while password != "python":
+#     password = input("Incorrect password, try again: ")
+# print("Access Granted!")
+
+# lab 12
+for score in [80, 55, 45, 90]:
+    if score < 50:
+        pass
+    print(f"if passed the {score}")
+    print(" ")
+
+for record in [80, 55, 45, 90]:
+    if record < 50:
+        print(f"if skipped {record}")
+        continue
+for badsscore in [80, 55, 45, 90]:
+    if badsscore < 50:
+        break
+    print(f"We saw: {badsscore}")
+
+# lab 13
+for row in range(1, 4):
+    for column in range(1, 4):
+        #print(f"Row: {row}, Column: {column}")
+        print(f"{row} X {column} = {row * column}")
