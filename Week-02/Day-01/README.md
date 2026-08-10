@@ -1,81 +1,80 @@
-# Day 01 - Python Workflow and Virtual Environments
+# Week 2 - Day 1 - Python Workflow and Virtual Environments
 
-Today I reviewed the basic Python development workflow and practiced creating and running Python files.
+**Date:** 2026-08-02
+
+## Overview
+
+This lesson covered the basic Python project workflow and how to prepare a project environment. It introduced virtual environments, package management with `pip`, Flake8, and saving dependencies in `requirements.txt`.
 
 ## Topics Covered
 
-- Creating and running Python files
-- Using functions
-- Reading user input with `input()`
-- Converting input using `int()`
-- Creating a virtual environment
-- Installing packages with `pip`
-- Checking code quality with Flake8
-- Saving dependencies in `requirements.txt`
+- Python files and functions
+- User input and type conversion
+- Virtual environments
+- Python project workflow
+- `pip` and package installation
+- Flake8
+- `requirements.txt`
 
-## Typical Python Workflow
+## Key Concepts
 
-1. Create the project folder.
-2. Create and activate a virtual environment.
-3. Install the required packages.
-4. Write and test Python code.
-5. Save the installed dependencies.
+### Virtual Environment
 
-## Virtual Environment
-
-A virtual environment creates an isolated workspace for each Python project.
+A virtual environment is an isolated Python workspace for one project. It keeps project packages and versions separate from other projects.
 
 ```powershell
 python -m venv venv
 .\venv\Scripts\Activate.ps1
 ```
 
-To exit the virtual environment:
+### Python Project Workflow
 
-```powershell
-deactivate
-```
+A simple Python project usually follows four steps:
 
-## Package Management
+1. **Setup** — create the project and virtual environment.
+2. **Dependencies** — install required packages.
+3. **Development** — write, run, and test the code.
+4. **Snapshot** — save the installed dependencies.
 
-Install Flake8:
+### Package Management
+
+`pip` is used to install Python packages. `requirements.txt` stores the packages and versions used by the project.
 
 ```powershell
 pip install flake8
-```
-
-Check the installed version:
-
-```powershell
-flake8 --version
-```
-
-Save the installed packages:
-
-```powershell
 pip freeze > requirements.txt
 ```
 
-## Flake8
+### Flake8
 
-Flake8 is a linter that checks Python code for quality and style issues.
+Flake8 is a linter used to check Python code for style and common code issues.
 
-It can detect:
+## Important Syntax / Patterns
 
-- Syntax issues
-- Unused variables
-- Formatting problems
-- PEP 8 violations
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install flake8
+flake8 --version
+pip freeze > requirements.txt
+deactivate
+```
 
-## Practice
+## Quick Review
 
-I created Python programs that:
+- `.py` files contain Python code.
+- Functions organize reusable code.
+- `input()` returns a string.
+- Virtual environments isolate project packages.
+- `pip` installs packages.
+- Flake8 checks code quality and style.
+- `requirements.txt` saves project dependencies.
+- Workflow: **Setup → Dependencies → Development → Snapshot**.
 
-- Printed a simple message
-- Read two numbers from the user
-- Added the numbers
-- Used functions to organize the code
+## Project
 
-  Related Repository
-🔗 Unit 1 Project
-https://github.com/MajdAlharbi/project-unit1
+**Unit 1 Project — Automated Python Project Setup**
+
+Create a script that generates a Python project structure, documents the project, initializes Git, and pushes it to GitHub.
+
+🔗 https://github.com/MajdAlharbi/project-unit1
