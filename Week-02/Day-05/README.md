@@ -1,80 +1,76 @@
-# Python Loops Summary
+# Week 2 - Day 5 - Python Loops
 
-## Loop
-A loop repeats a block of code more than once.
-Each repetition is called an iteration.
+**Date:** 2026-08-06
 
-## for Loop
-Use a for loop when the number of repetitions is known or when processing a sequence.
+## Overview
+
+This lesson covered how loops repeat code using `for` and `while`. It also introduced `range()`, counters, accumulators, loop control, and nested loops.
+
+## Topics Covered
+
+- `for` loops
+- `range()`
+- Looping through strings and lists
+- Conditions inside loops
+- Counters and accumulators
+- `while` loops
+- `break`, `continue`, and `pass`
+- Nested loops
+
+## Key Concepts
+
+### `for` Loop
+
+Use `for` when looping through a known range or sequence.
 
 ```python
 for number in range(1, 6):
     print(number)
 ```
 
-## range()
+### `range()`
+
+`range()` generates numbers for a loop.
+
 ```python
 range(stop)
 range(start, stop)
 range(start, stop, step)
 ```
 
-Examples:
-- `range(5)` → 0, 1, 2, 3, 4
-- `range(1, 6)` → 1, 2, 3, 4, 5
-- `range(2, 11, 2)` → 2, 4, 6, 8, 10
-- `range(10, 0, -1)` → counts backward from 10 to 1
+The `stop` value is not included.
 
-The stop value is not included.
+### Looping Through Sequences
 
-## Loop Through a String
+A `for` loop can go through strings and lists.
+
 ```python
-course = "python"
-
-for letter in course:
+for letter in "Python":
     print(letter)
 ```
 
-## Loop Through a List
-```python
-students = ["majd", "sara", "ali"]
+### Conditions Inside Loops
 
-for student in students:
-    print(student)
-```
+Conditions can control what happens during each iteration.
 
-## Conditions Inside a Loop
 ```python
 for number in range(1, 6):
     if number % 2 == 0:
-        print(f"{number} is even")
-    else:
-        print(f"{number} is odd")
+        print("Even")
 ```
 
-## Counter
-A counter records how many times something happens.
+### Counter and Accumulator
+
+A counter counts events, while an accumulator builds a total.
 
 ```python
-count = 0
-
-for number in range(1, 11):
-    if number % 2 == 0:
-        count += 1
+count += 1
+total += number
 ```
 
-## Accumulator
-An accumulator builds a total over time.
+### `while` Loop
 
-```python
-total = 0
-
-for number in range(1, 6):
-    total += number
-```
-
-## while Loop
-Use a while loop when repetition depends on a condition.
+Use `while` when repetition depends on a condition.
 
 ```python
 count = 1
@@ -84,33 +80,16 @@ while count <= 5:
     count += 1
 ```
 
-Always update the condition to avoid an infinite loop.
+The condition must eventually become `False` to avoid an infinite loop.
 
-## break
-Stops the loop completely.
+### Loop Control
 
-```python
-if command == "exit":
-    break
-```
+- `break` — stops the loop
+- `continue` — skips the current iteration
+- `pass` — does nothing
 
-## continue
-Skips only the current iteration.
+### Nested Loops
 
-```python
-if number == 3:
-    continue
-```
-
-## pass
-Does nothing. It is used as a temporary placeholder.
-
-```python
-if condition:
-    pass
-```
-
-## Nested Loops
 A loop can run inside another loop.
 
 ```python
@@ -119,14 +98,30 @@ for row in range(3):
         print(row, column)
 ```
 
-## for vs while
-- `for`: use with a known range, string, list, or sequence.
-- `while`: use when repetition depends on a changing condition.
+## Important Syntax / Patterns
 
-## Important Notes
+```python
+for item in sequence:
+    ...
+
+for number in range(start, stop, step):
+    ...
+
+while condition:
+    ...
+
+break
+continue
+pass
+```
+
+## Quick Review
+
+- A loop repeats code.
+- `for` is used with known ranges or sequences.
+- `while` is used when repetition depends on a condition.
 - `range()` excludes the stop value.
-- Indentation is required inside loops.
-- `count += 1` counts events.
-- `total += number` adds values.
-- `break` exits the loop.
+- Counters count events; accumulators build totals.
+- `break` stops a loop.
 - `continue` skips one iteration.
+- `pass` does nothing.
