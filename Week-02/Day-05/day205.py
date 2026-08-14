@@ -17,7 +17,7 @@ for letter in course:
     print(letter)
 
 # lab 5
-students = ["majd", "sara", "ail"]
+students = ["majd", "sara", "ali"]
 
 for student in students:
     print(f"progressing student {student}")
@@ -37,7 +37,7 @@ even_counter = 0
 for nums in numbers:
     if nums % 2 == 0:
         even_counter += 1
-print(f"Total even numbeers is: {even_counter * 10}")
+print(f"Total even numbers is: {even_counter * 10}")
 
 # lab 8
 prices = [23, 30, 55, 115]
@@ -82,10 +82,10 @@ for record in [80, 55, 45, 90]:
     if record < 50:
         print(f"if skipped {record}")
         continue
-for badsscore in [80, 55, 45, 90]:
-    if badsscore < 50:
+for bad_score in [80, 55, 45, 90]:
+    if bad_score < 50:
         break
-    print(f"We saw: {badsscore}")
+    print(f"We saw: {bad_score}")
 
 # lab 13
 for row in range(1, 4):
