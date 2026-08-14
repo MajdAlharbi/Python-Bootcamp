@@ -13,7 +13,7 @@ def myInfo():
     print(register)
 
     print("\nExercise 2")
-    print(f"My name {name}. I'm {age} years old and i study {myCourse}")
+    print(f"My name {name}. I'm {age} years old and I study {myCourse}")
 
 
 myInfo()
