@@ -7,7 +7,7 @@ box_capacity = 5
 
 full_box = total_items // box_capacity
 remaining_items = total_items % box_capacity
-print(f"you can full up to : {full_box}")
+print(f"You can fill up to: {full_box}")
 print(f"And you have {remaining_items} remaining ")
 
 base_calc = 2 + 3 * 2**2
@@ -77,25 +77,25 @@ else:
 
 # lab 8
 
-massage = "I love Python programming"
-first_char = massage[0]
-last_char = massage[-1]
+message = "I love Python programming"
+first_char = message[0]
+last_char = message[-1]
 print(f"First character: {first_char} and Last character: {last_char}")
 
 # slicing
-sliced_massage = massage[:7]
-print(f"Sliced message: {sliced_massage}")
+sliced_message = message[:7]
+print(f"Sliced message: {sliced_message}")
 
-reverse_massage = massage[::-1]
-print(f"Reversed message: {reverse_massage}")
+reverse_message = message[::-1]
+print(f"Reversed message: {reverse_message}")
 
 # lab 9
 my_email = "             majd@hmail.com"
 cleaned_email = my_email.strip().lower()
 print(f"Cleaned email: {cleaned_email}")
-massage = "I love Python programming"
-titled_massage = massage.title()
-print(f"your email is: {cleaned_email} and your course is: {titled_massage}")
+message = "I love Python programming"
+titled_message = message.title()
+print(f"your email is: {cleaned_email} and your course is: {titled_message}")
 
 # lab 10
 csv_text = "Majd,Sara,Ail"
@@ -121,7 +121,7 @@ if x == y:
 else:
     print("x is not equal to y")
 
-# if thay are lists they will not be the same object
+# if they are lists, they will not be the same object
 x = [5]
 y = [5]
 if x is y:
@@ -133,9 +133,9 @@ else:
     print(id(y))  # use id() to get the memory address of the object
 
     # lab 12
-    massage = "I love Python programming"
-    new_massage = massage.replace("Python", "Java")
-    print(new_massage)
+    message = "I love Python programming"
+    new_message = message.replace("Python", "Java")
+    print(new_message)
 
     x = 5
     y = 6

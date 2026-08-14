@@ -11,7 +11,7 @@ def try_split_and_join():
 try_split_and_join()
 
 
-def try_numbrs():
+def try_numbers():
     num1 = int(input("Enter first number: "))
     num2 = int(input("Enter second number: "))
     print("The sum of the two numbers is: ", num1 + num2)
@@ -39,4 +39,4 @@ def try_numbrs():
     print(a is c)
 
 
-try_numbrs()
+try_numbers()
