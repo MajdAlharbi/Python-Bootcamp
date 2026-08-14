@@ -1,166 +1,136 @@
-# Week 2 - Day 3 - Python Operators and Strings
+# Week 2 - Day 4 - Conditions 
 
-**Date:** 2026-08-04
+**Date:** 2026-08-05
 
 ## Overview
 
-This lesson covered the main Python operators and how they are used in expressions and comparisons. It also introduced string indexing, slicing, common string methods, and the difference between equality and object identity.
+This lesson covered how Python uses conditions to control program flow and how user input can be validated before processing. It also introduced Truthy/Falsy values, nested conditions, and `match-case`.
 
 ## Topics Covered
 
-- Arithmetic and assignment operators
-- Comparison and logical operators
-- Membership and identity operators
-- Operator precedence
-- String indexing and slicing
-- Common string methods
-- `split()` and `join()`
-- String immutability
+- `if`, `elif`, and `else`
+- Logical operators
+- Nested conditions
+- Truthy and Falsy values
+- Input validation
+- Range and membership validation
+- Conditional expressions
+- `match-case`
 
 ## Key Concepts
 
-### Python Operators
+### Conditions
 
-Arithmetic operators perform calculations:
-
-- `+` addition
-- `-` subtraction
-- `*` multiplication
-- `/` division
-- `//` floor division
-- `%` remainder
-- `**` exponentiation
+Conditions evaluate to `True` or `False` and decide which code block runs.
 
 ```python
-print(7 / 3)   # 2.33...
-print(7 // 3)  # 2
-print(7 % 3)   # 1
+age = 20
+
+if age >= 18:
+    print("Welcome")
 ```
 
-Assignment operators update an existing value:
+Python checks `if / elif / else` from top to bottom and stops at the first `True` condition.
 
-```python
-score = 10
-score += 5
-```
-
-### Comparison and Logical Operators
-
-Comparison operators return `True` or `False`.
-
-```python
-age >= 18
-score == 90
-score != 50
-```
+### Logical Operators
 
 Logical operators combine conditions:
 
-- `and` → both conditions must be True
-- `or` → at least one condition must be True
-- `not` → reverses a Boolean value
-
-### Membership and Identity
-
-`in` and `not in` check whether a value exists inside a string or collection.
+- `and` — both conditions must be True
+- `or` — at least one condition must be True
+- `not` — reverses a Boolean value
 
 ```python
-"Py" in "Python"   # True
+if is_active and is_verified:
+    print("Account is ready")
 ```
 
-`==` compares values, while `is` compares whether two variables refer to the same object.
+### Truthy and Falsy Values
+
+Python can treat values directly as conditions.
+
+Common Falsy values include:
+
+- `False`
+- `None`
+- `0`
+- `""`
+- empty collections such as `[]`
+
+### Input Validation
+
+Input should be checked before converting or processing it.
 
 ```python
-first == second
-first is second
+age_text = input("Enter your age: ").strip()
+
+if age_text.isdigit():
+    age = int(age_text)
 ```
 
-### String Indexing and Slicing
-
-String indexes start at `0`. Negative indexes count from the end.
-
-```python
-text = "Python"
-
-text[0]     # P
-text[-1]    # n
-text[0:3]   # Pyt
-```
-
-Slicing follows:
-
-```python
-text[start:stop:step]
-```
-
-The `stop` position is not included.
-
-### String Methods
-
-Common string methods include:
+Useful validation methods:
 
 - `strip()` — removes surrounding spaces
-- `lower()` / `upper()` — changes letter case
-- `replace()` — replaces text
-- `find()` — finds a position
-- `split()` — splits text into a list
-- `join()` — combines strings
+- `isdigit()` — checks for digits
+- `isalpha()` — checks for letters
+- `isalnum()` — checks for letters and digits
+
+### Range and Membership Validation
+
+Use comparisons for ranges and `in` for allowed choices.
 
 ```python
-text = "  Python Bootcamp  "
+if 0 <= score <= 100:
+    print("Valid score")
 
-text.strip()
-text.lower()
-text.replace("Bootcamp", "Course")
+if membership in ["Admin", "Editor", "Viewer"]:
+    print("Allowed")
 ```
 
-### String Immutability
+### `match-case`
 
-Strings are immutable, which means they cannot be changed in place. String methods return a new string, so the result should be stored if you want to keep the change.
+`match-case` is useful when comparing one value against several fixed options.
 
 ```python
-name = "python"
-name = name.upper()
+match command:
+    case "start":
+        print("Starting...")
+    case "stop":
+        print("Stopping...")
+    case _:
+        print("Invalid command")
 ```
 
 ## Important Syntax / Patterns
 
 ```python
-# Arithmetic
-+  -  *  /  //  %  **
+if condition:
+    ...
+elif condition:
+    ...
+else:
+    ...
 
-# Comparison
-==  !=  >  <  >=  <=
+and
+or
+not
 
-# Logical
-and  or  not
+value if condition else other_value
 
-# Membership
-in  not in
-
-# Identity
-is  is not
-
-# String slicing
-text[start:stop:step]
-
-# Common methods
-strip()
-lower()
-upper()
-replace()
-find()
-split()
-join()
+match value:
+    case "option":
+        ...
+    case _:
+        ...
 ```
 
 ## Quick Review
 
-- `/` gives normal division, `//` gives whole groups, and `%` gives the remainder.
-- Python follows operator precedence when evaluating expressions.
-- Comparison operators return `True` or `False`.
+- Conditions control which code runs.
+- `if / elif / else` are checked from top to bottom.
 - `and`, `or`, and `not` combine Boolean conditions.
-- `in` checks membership.
-- `==` compares values; `is` compares object identity.
-- String indexes start at `0`, and slicing excludes the stop position.
-- Strings are immutable, so methods return new strings.
+- Empty strings, zero, `None`, and empty collections are Falsy.
+- Validate input before converting it.
+- Use range checks for numeric limits.
+- Use `in` to check allowed choices.
+- Use `match-case` for fixed options.

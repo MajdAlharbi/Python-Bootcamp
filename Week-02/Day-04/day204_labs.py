@@ -6,8 +6,8 @@ if 18 > age < 55:
 print("Code Completed")
 
 # lab 2
-temprator = 31
-if temprator >= 35:
+temperature = 31
+if temperature >= 35:
     print("Its hot outside")
 else:
     print("cool")
@@ -26,18 +26,18 @@ else:
 
 # lab 4
 is_active = True
-is_verifled = True
+is_verified = True
 role = "editor"
-is_blcked = False
+is_blocked = False
 
-if is_active and is_verifled:
+if is_active and is_verified:
     print("Account is ready")
 
 if role == "admin" or role == "editor":
-    print("user is not bloked")
+    print("user is not blocked")
 
-if not is_blcked:
-    print("user is not bloked")
+if not is_blocked:
+    print("user is not blocked")
 
 else:
     print("user is blocked")
@@ -48,9 +48,9 @@ has_permission = True
 
 if account_active:
     if has_permission:
-        print("Acces Granted")
+        print("Access Granted")
     else:
-        print("Access denid")
+        print("Access denied")
 else:
     print("Account is not active")
 
@@ -63,19 +63,19 @@ if name:
     print("Name has a value")
 
 if not cart:
-    print("Your cart is empty, plese shop")
+    print("Your cart is empty, please shop")
 print(bool(balance))
 
 # lab 7
 
-name = input("enter ypur name: ")
+name = input("enter your name: ")
 
 if not name:
     print("enter your name")
 elif not name.replace(" ", "").isalpha():
     print("name must contain letters")
 else:
-    print(f"Vaild name {name}")
+    print(f"Valid name {name}")
 
 print(name.replace(" ", ""))
 
@@ -88,7 +88,7 @@ if age_text.isdigit():
     age = int(age_text)
     print(f"You will be {age + 5} in 5 years")
 else:
-    print("Enrer a namber")
+    print("Enter a number")
 
 # lab 9
 is_score_valid = False
@@ -107,26 +107,25 @@ else:
     print("Enter a number")
 
 # lab 10
-membership = ["Admin", "Editor", "Viewe"]
+membership = ["Admin", "Editor", "Viewer"]
 
-currenr_membership = input("enter your memmbership: ").strip().lower()
+current_membership = input("enter your membership: ").strip().lower()
 
-if currenr_membership.title() in membership:
-    print("you are allowed to viwe to co..")
-    print(currenr_membership)
+if current_membership.title() in membership:
+    print("you are allowed to view to co..")
+    print(current_membership)
 else:
-    print("plese contxct admin team")
-    print(currenr_membership)
+    print("please contact admin team")
+    print(current_membership)
 
 # lab 11
-commands = input("plese enter a commed (start,stop,status)").strip().lower()
+commands = input("please enter a command (start,stop,status)").strip().lower()
 match commands:
     case "start":
         print("starting system...")
     case "stop":
-        print("stoping system..")
+        print("stopping system..")
     case "status":
-        print("System is up and runnig")
+        print("System is up and running")
     case _:
-        print("please enter a proper commed")
-        
+        print("please enter a proper command")
