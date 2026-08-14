@@ -1,7 +1,7 @@
 python --version
 
-mkdir 6rd_P
-cd 6rd_P
+mkdir python-workflow
+cd python-workflow
 
 Set-Content main.py "def main():
     print('Hello')
