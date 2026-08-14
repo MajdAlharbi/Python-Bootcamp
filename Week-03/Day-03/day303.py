@@ -37,7 +37,7 @@ print(Numbers[::2])  # [10, 30, 50]
 print(Numbers[::-1])  # [50, 40, 30, 20, 10]
 print("\n")
 
-# 5- list can chang after Creation
+# 5- list can change after Creation
 task = ["plan", "code"]
 
 task[0] = "design"
@@ -47,7 +47,7 @@ task.insert(1, "review")
 print(task)
 print("\n")
 
-# 6- list methods Add,Remove,and Recoder items
+# 6- list methods Add,Remove,and Reorder items
 scores = [88, 72, 95, 81]
 
 scores.remove(72)
@@ -74,22 +74,22 @@ print(matrix[0])
 print(matrix[1][2])
 print("\n")
 
-# 9-Tuples store orderd Values that shod not change
+# 9-Tuples store ordered Values that should not change
 location = (24.1234, 46.437901)
 
 print(location[0])
 print(location[-1])
 print("\n")
 
-# 10-Unpaking Assigns Collection Items to Names
-parson = ["sara", 22, "python"]
-name, age, course, *other = parson
+# 10-Unpacking Assigns Collection Items to Names
+person = ["sara", 22, "python"]
+name, age, course, *other = person
 print(name, age, course, other)
 print("\n")
 
-# 11-Sets Keep only uniqe values
+# 11-Sets Keep only unique values
 skills = {"python", "Git", "python"}
-skills.add("djange")
+skills.add("django")
 
 print(skills)
 print("Git" in skills)
@@ -97,20 +97,20 @@ print(len(skills))
 print("\n")
 
 # 12-set operations compare Groups
-beckend = {"python", "Django", "SQL"}
+backend = {"python", "Django", "SQL"}
 frontend = {"HTML", "CSS", "JavaScript", "SQL"}
 
 print(
-    beckend | frontend
+    backend | frontend
 )  # union {'CSS', 'python', 'Django', 'JavaScript', 'HTML', 'SQL'}
-print(beckend & frontend)  # intersection {'SQL'}
-print(frontend - beckend)  # difference {'CSS', 'HTML', 'JavaScript'}
+print(backend & frontend)  # intersection {'SQL'}
+print(frontend - backend)  # difference {'CSS', 'HTML', 'JavaScript'}
 print("\n")
 
 # 13-
-parson1 = {"name": "sara", "age": 22, "course": "python"}
+person1 = {"name": "sara", "age": 22, "course": "python"}
 
-print(parson1["name"])
+print(person1["name"])
 print("\n")
 
 # 14-Add, Update,and Remove Dictionary values
@@ -123,7 +123,7 @@ grade = student1.pop("grade")
 print(student1)
 print("\n")
 
-# 15-Dicrionary loops can read keays and values
+# 15-Dictionary loops can read keys and values
 student2 = {"name": "Sara", "score": 90}
 for key in student2:
     print(key)
@@ -157,5 +157,3 @@ for student in student4:
 
 
 # 19-collection Error usually reveal the wrong assumption
-
-
