@@ -1,5 +1,5 @@
 # training
-def calculate_grad(score):
+def calculate_grade(score):
     if score >= 90:
         return "A"
     elif score >= 80:
@@ -12,11 +12,11 @@ def calculate_grad(score):
         return "F"
 
 
-print(calculate_grad(99))
-print(calculate_grad(88))
-print(calculate_grad(77))
-print(calculate_grad(66))
-print(calculate_grad(55))
+print(calculate_grade(99))
+print(calculate_grade(88))
+print(calculate_grade(77))
+print(calculate_grade(66))
+print(calculate_grade(55))
 print("\n")
 
 
@@ -31,7 +31,7 @@ print("\n")
 
 # lab 2
 def show_menu():
-    print(f"1-Coffee\n2-Tea\n3-Giger")
+    print(f"1-Coffee\n2-Tea\n3-Ginger")
 
 
 show_menu()
@@ -43,7 +43,7 @@ print("\n")
 print("Line One")
 
 
-def unknowScope():
+def unknownScope():
     def gotofunc():
         print("From within the GoTo")
         print("Where is line 2?")
@@ -52,7 +52,7 @@ def unknowScope():
     print("I'm up here")
 
 
-unknowScope()
+unknownScope()
 print("\n")
 
 
@@ -66,14 +66,17 @@ print("\n")
 
 
 # lab 5
-def show_booking(destinatoin="Riyadh", nights="1"):
+def show_booking(destination="Riyadh", nights="1"):
     if nights.isdigit():
         nn = int(nights)
-    print(f"you're traveling to {destinatoin}, and will stay for {nn}")
+    else:
+        nn = 1
+
+    print(f"you're traveling to {destination}, and will stay for {nn}")
 
 
 show_booking()
-show_booking("Jaddah", "5")
+show_booking("Jeddah", "5")
 print("\n")
 
 
@@ -86,7 +89,5 @@ def getVAT(total, rate=0.15):
 
 print(getVAT(154))
 print(getVAT.__doc__)
-help(getVAT())
+help(getVAT)
 print("\n")
-
-
