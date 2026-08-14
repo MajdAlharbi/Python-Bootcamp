@@ -1,4 +1,4 @@
-def calculate_grad(score):
+def calculate_grade(score):
     if score >= 90:
         return "A"
     elif score >= 80:

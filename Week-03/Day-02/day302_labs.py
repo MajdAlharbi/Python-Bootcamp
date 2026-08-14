@@ -3,8 +3,9 @@ course = "Web Development Bootcamp"
 duration = 12
 
 
+# This intentionally shadows Python's built-in type() for the lesson.
 def type(course):
-    print("opss!")  # wthot return print None
+    print("oops!")  # without return, print() returns None
 
 
 print(course)
@@ -24,48 +25,48 @@ print("\n")
 
 
 # lab 3
-loction = "Global"
+location = "Global"
 
 
-def outter():
-    loction = "Outter"
-    print(f"From {loction}")
+def outer():
+    location = "outer"
+    print(f"From {location}")
 
     def inner():
-        loction = "Inner"
-        print(f"From {loction}")
+        location = "Inner"
+        print(f"From {location}")
 
     inner()
 
 
-outter()
+outer()
 
 # lab 4
-loction = 0
+location = 0
 
 
-def outter():
-    loction = 1
-    print(f"From {loction}")
+def outer():
+    location = 1
+    print(f"From {location}")
 
     def inner():
-        nonlocal loction
-        loction += 2
-        print(f"From {loction}")
+        nonlocal location
+        location += 2
+        print(f"From {location}")
 
     inner()
 
 
-outter()
+outer()
 
 
-# # trainirg
-# def prinrer():
+# # ltraining
+# def printer():
 #     print("Welcome")
 
 
 # def desk():
-#     prinrer()
+#     printer()
 
 
 # def room():
@@ -75,15 +76,15 @@ outter()
 
 
 # lab 5
-languge = "python"
+language = "python"
 
 
-def show_lang(languge):
-    print(languge)
+def show_lang(language):
+    print(language)
 
 
 show_lang("Dart")
-print(languge)
+print(language)
 print("\n")
 
 # lab 6
@@ -110,5 +111,3 @@ def inspect_order(item, qty):
 
 
 inspect_order("Pen", 10)
-
-
