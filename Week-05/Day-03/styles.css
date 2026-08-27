@@ -1,0 +1,35 @@
+/* Specificity Challenge */
+/* element < class < id */
+p {
+    color: red;
+}
+
+.note {
+    color: blue;
+}
+
+#main-note {
+    color: green;
+}
+
+body {
+    background-color: rgb(203, 233, 223);
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 80%;
+    margin: auto;
+}
+
+legend {
+    font-size: larger;
+}
+
+button {
+    padding: 8px 15px;
+}
+
+button:hover {
+    background-color: rgb(150, 210, 190);
+}
