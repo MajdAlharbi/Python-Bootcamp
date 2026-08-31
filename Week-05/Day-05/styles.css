@@ -1,0 +1,96 @@
+/* Day04-lab1 */
+body {
+    background-color: antiquewhite;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Day04-lab2 */
+
+.courses {
+    padding: 30px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Day04-lab3 */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 30px;
+}
+
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Day05-lab1 */
+button {
+    background: var(--main-color);
+    transition: transfrom .35s ease, background .25s ease;
+
+}
+
+button:hover,
+button:focus {
+    transform: translateY(-4px);
+    background: var(--accent-color);
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+}

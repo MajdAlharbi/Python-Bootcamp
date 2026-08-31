@@ -196,3 +196,6 @@
 
 
 # print(find_lowest_score(students))
+
+courses = ["python", "HTML"]
+student_courses = courses
