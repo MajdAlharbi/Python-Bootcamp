@@ -12,9 +12,6 @@ def book_list(request):
 
 
 def book_detail(request, id):
-    book = None
-    for b in books:
-        if b["id"] == id:
-            book = b
-            break
-    return render(request, "libary/book_detail.html", {"book": book})
+    book = books[id - 1]
+    context = {"book": book}
+    return render(request, "libary/book_detail.html", context)
