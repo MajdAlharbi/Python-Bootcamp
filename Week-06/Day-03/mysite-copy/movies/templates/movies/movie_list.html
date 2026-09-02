@@ -5,9 +5,25 @@
 <h1>Movies</h1>
 
 {% for movie in movies %}
-<p>
-    {{ movie.title }} - {{ movie.year }} (Rating: {{ movie.rating }})
-</p>
+
+<div class="movie-card">
+
+    <div class="movie-title">
+        <a href="{% url 'movie_detail' movie.id %}">
+            {{ movie.title }}
+        </a>
+    </div>
+
+    <div class="movie-info">
+        Year: {{ movie.year }}
+    </div>
+
+    <div class="rating">
+        Rating: {{ movie.rating }}
+    </div>
+
+</div>
+
 {% endfor %}
 
 {% endblock %}

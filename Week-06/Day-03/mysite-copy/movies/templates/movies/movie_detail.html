@@ -2,10 +2,24 @@
 
 {% block content %}
 
-<h1>Movies</h1>
+<div class="detail-card">
 
+    <h1 class="detail-title">
+        {{ movie.title }}
+    </h1>
 
-<p>
-    {{ movie.title }} - {{ movie.year }} (Rating: {{ movie.rating }})
-</p>
+    <p class="detail-info">
+        Year: {{ movie.year }}
+    </p>
+
+    <p class="detail-info">
+        Rating: {{ movie.rating }}
+    </p>
+
+    <a class="back-button" href="{% url 'movie_list' %}">
+        Back to Movies
+    </a>
+
+</div>
+
 {% endblock %}
