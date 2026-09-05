@@ -1,0 +1,17 @@
+{% extends "courses/base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Course Category</h2>
+
+    <p>Category: {{ category_name }}</p>
+
+    <a href="{% url 'courses:list_courses' %}">
+        Back to Courses
+    </a>
+
+</div>
+
+{% endblock %}

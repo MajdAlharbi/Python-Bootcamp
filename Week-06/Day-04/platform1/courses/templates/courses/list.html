@@ -1,0 +1,33 @@
+{% extends "courses/base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Courses List</h2>
+
+    <p>Available courses:</p>
+
+    <ul>
+        <li>
+            <a href="{% url 'courses:course_detail' 1 %}">
+                Python
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'courses:course_detail' 2 %}">
+                Django
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'courses:course_detail' 3 %}">
+                HTML & CSS
+            </a>
+        </li>
+    </ul>
+
+</div>
+
+{% endblock %}

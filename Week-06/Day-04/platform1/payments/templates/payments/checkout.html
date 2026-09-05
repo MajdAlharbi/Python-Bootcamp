@@ -1,0 +1,23 @@
+{% extends "payments/base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Checkout</h2>
+
+    <p>Complete your payment details.</p>
+
+    <form>
+        <label>Course</label>
+        <input type="text" placeholder="Course name">
+
+        <label>Amount</label>
+        <input type="number" placeholder="Amount">
+
+        <button type="submit">Pay Now</button>
+    </form>
+
+</div>
+
+{% endblock %}
