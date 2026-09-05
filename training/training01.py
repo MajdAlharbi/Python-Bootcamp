@@ -197,5 +197,94 @@
 
 # print(find_lowest_score(students))
 
-courses = ["python", "HTML"]
-student_courses = courses
+# courses = ["python", "HTML"]
+# student_courses = courses
+
+# class Student:
+#     courses = []
+
+#     def __init__(self, name):
+#         self.name = name
+
+#     def add_course(self, course):
+#         self.courses.append(course)
+
+
+# student1 = Student("Majd")
+# student2 = Student("Sara")
+
+# student1.add_course("Python")
+
+# print(student1.courses)
+# print(student2.courses)
+
+# {
+#     "average": ...,
+#     "highest": ...,
+#     "lowest": ...,
+#     "passed": ...,
+#     "failed": ...
+# }
+
+# scores = [75, 40, 90, 50, 30]
+
+
+# def analyze_scores(scores):
+#     if not scores:
+#         return None
+#     highest = max(scores)
+#     lowest = min(scores)
+#     passed = 0
+#     failed = 0
+#     average = sum(scores) / len(scores)
+#     for score in scores:
+#         if score < 0 or score > 100:
+#             raise ValueError("Invalid score")
+
+#         if score >= 50:
+#             passed += 1
+#         else:
+#             failed += 1
+
+#     return {
+#         "average": average,
+#         "highest": highest,
+#         "lowest": lowest,
+#         "passed": passed,
+#         "failed": failed,
+#     }
+
+
+# print(analyze_scores([75, 40, 90, 50, 30]))
+# print(analyze_scores([]))
+
+# try:
+#     print(analyze_scores([75, 120]))
+# except ValueError as error:
+#     print(error)
+
+
+# class Student:
+#     def __init__(self, name):
+#         self.name = name
+#         self.courses = []
+
+#     def add_course(self, course):
+#         if course in self.courses:
+#             raise ValueError("Course already exists")
+#         self.courses.append(course)
+
+#     def save_to_file(self, filename):
+#         return f"Name: {filename}\n Courses: {self.courses}"
+
+
+# student1 = Student("Majd")
+# student2 = Student("Sara")
+
+# student1.add_course("python")
+
+# print(student1.courses)
+# print(student2.courses)
+# student1.add_course("python")
+# print(student1.courses)
+
