@@ -3,6 +3,7 @@ from django.views import View
 
 
 def home(request):
+    print(request)
     return render(request, "dashboard/home.html")
 
 
