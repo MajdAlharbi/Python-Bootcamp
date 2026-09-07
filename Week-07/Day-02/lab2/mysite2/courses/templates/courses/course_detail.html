@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Course Details
+{% endblock %}
+
+{% block content %}
+
+{% if course %}
+
+<div class="card">
+    <img src="{% static course.image %}" alt="{{ course.name }}">
+
+    <h1>{{ course.name|title }}</h1>
+
+    <p>
+        Level: {{ course.level|title }}
+    </p>
+
+    <p>
+        Students: {{ course.student_count }}
+    </p>
+
+    <p>
+        {{ course.description|safe }}
+    </p>
+
+    <a href="{% url 'courses' %}">
+        Back to Courses
+    </a>
+
+</div>
+
+{% else %}
+
+<h1>Course not found</h1>
+
+<a href="{% url 'courses' %}">
+    Back to Courses
+</a>
+
+{% endif %}
+
+{% endblock %}

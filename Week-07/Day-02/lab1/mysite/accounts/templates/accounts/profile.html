@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Profile</h2>
+
+    <p>Welcome {{ username|title }}</p>
+
+    <h3>Skills</h3>
+
+    {% for skill in skills %}
+
+    <p>{{ skill }}</p>
+
+    {% empty %}
+
+    <p>No skills added yet.</p>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
