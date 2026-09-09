@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.page-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.form-textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-file {
+    font-size: 14px;
+}
+
+.post-button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+}
+
+.post-button:hover {
+    background-color: #444;
+}
+
+.feed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.post-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    padding: 14px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.post-username {
+    font-weight: bold;
+}
+
+.post-image-box {
+    width: 100%;
+}
+
+.post-image {
+    width: 100%;
+    display: block;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.post-description {
+    padding: 15px 16px 5px;
+    margin: 0;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px 18px;
+}
+
+.like-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.like-button:hover {
+    transform: scale(1.05);
+}
+
+.likes-count {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.error-message {
+    background-color: #ffe5e5;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.empty-text {
+    text-align: center;
+    color: #777;
+}

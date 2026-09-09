@@ -1,0 +1,73 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Instagram</title>
+    <link rel="stylesheet" href="{% static 'css/feed.css' %}" />
+  </head>
+  <body>
+    <div class="page-container">
+      <h1 class="page-title">Mini Instagram</h1>
+
+      {% if error %}
+      <p class="error-message">{{ error }}</p>
+      {% endif %}
+
+      <div class="form-card">
+        <form method="POST" enctype="multipart/form-data" class="post-form">
+          {% csrf_token %}
+
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            class="form-input"
+          />
+
+          <textarea
+            name="description"
+            placeholder="Description"
+            class="form-input form-textarea"
+          ></textarea>
+
+          <input type="file" name="image" class="form-file" />
+
+          <button type="submit" class="post-button">Post</button>
+        </form>
+      </div>
+
+      <div class="feed-list">
+        {% for post in posts %}
+        <div class="post-card">
+          <div class="post-header">
+            <span class="post-username">@{{ post.username }}</span>
+          </div>
+
+          <div class="post-image-box">
+            <img
+              src="{{ post.image.url }}"
+              alt="Post image"
+              class="post-image"
+            />
+          </div>
+
+          <p class="post-description">{{ post.description }}</p>
+
+          <div class="post-actions">
+            <form method="POST" action="{% url 'like_post' post.id %}">
+              {% csrf_token %}
+              <button type="submit" class="like-button">❤️ Like</button>
+            </form>
+
+            <span class="likes-count">{{ post.likes }} likes</span>
+          </div>
+        </div>
+        {% empty %}
+        <p class="empty-text">No posts yet.</p>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
