@@ -1,0 +1,58 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Courses</title>
+
+    <link rel="stylesheet" href="{% static 'css/courses.css' %}" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Course Catalog</h1>
+
+      <form method="get" class="filter-form">
+        <input type="text" name="category" placeholder="Category" />
+        <input type="text" name="difficulty" placeholder="Difficulty" />
+        <button type="submit">Filter</button>
+      </form>
+
+      <div class="course-grid">
+        {% for course in courses %}
+        <div class="course-card">
+          <h2>{{ course.name }}</h2>
+
+          <p>Category: {{ course.category }}</p>
+          <p>Difficulty: {{ course.difficulty }}</p>
+
+          <a class="details-btn" href="{% url 'course_detail' id=course.id %}">
+            View Details
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+
+      <div class="pagination">
+        <a href="?page=1">Page 1</a>
+        <a href="?page=2">Page 2</a>
+      </div>
+
+      {% if page %}
+      <p class="current-page">Current Page: {{ page }}</p>
+      {% endif %} {% if course %}
+      <div class="course-details">
+        <h2>{{ course.name }}</h2>
+
+        <div class="tabs">
+          <a href="?tab=overview">Overview</a>
+          <a href="?tab=lessons">Lessons</a>
+          <a href="?tab=reviews">Reviews</a>
+        </div>
+
+        <p>Current Tab: {{ tab }}</p>
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

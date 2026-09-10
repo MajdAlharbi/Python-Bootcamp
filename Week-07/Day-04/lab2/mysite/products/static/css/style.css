@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+    font-size: 36px;
+}
+
+.header p {
+    color: #777;
+}
+
+/* Product Cards */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.product-card h2 {
+    margin: 15px 0 10px;
+}
+
+.category {
+    display: inline-block;
+    background-color: #eeeeee;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 8px;
+}
+
+.rating {
+    margin-bottom: 20px;
+}
+
+/* Button */
+
+.details-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #222;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 7px;
+}
+
+.details-btn:hover {
+    opacity: 0.8;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #222;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 9px 15px;
+    border-radius: 7px;
+}
+
+.pagination a:hover {
+    background-color: #222;
+    color: white;
+}
+
+.pagination span {
+    font-weight: bold;
+}
