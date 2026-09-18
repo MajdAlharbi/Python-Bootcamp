@@ -1,0 +1,84 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Explorer</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Product Explorer</h1>
+        <p>Browse and explore our products</p>
+      </div>
+
+      <div class="product-grid">
+        {% for product in products %}
+        <div class="product-card">
+          <div class="category">{{ product.category }}</div>
+
+          <h2>{{ product.name }}</h2>
+
+          <p class="price">{{ product.price }} SAR</p>
+
+          <p class="rating">★ {{ product.rating }}</p>
+
+          <a
+            href="{% url 'product_detail' id=product.id %}"
+            class="details-btn"
+          >
+            View Details
+          </a>
+        </div>
+        {% empty %}
+        <p>No products found.</p>
+        {% endfor %}
+      </div>
+      {% if product %}
+      <div class="product-details">
+        <h2>{{ product.name }}</h2>
+
+        <p>{{ product.price }} SAR</p>
+        <p>Rating: {{ product.rating }}</p>
+
+        <div class="tabs">
+          <a href="?tab=description">Description</a>
+          <a href="?tab=reviews">Reviews</a>
+          <a href="?tab=shipping">Shipping</a>
+        </div>
+
+        <hr />
+
+        {% if tab == "description" %}
+        <p>{{ product.description }}</p>
+
+        {% elif tab == "reviews" %}
+        <p>Product rating: {{ product.rating }}</p>
+
+        {% elif tab == "shipping" %}
+        <p>Shipping information.</p>
+        {% endif %}
+      </div>
+      {% endif %}
+      <div class="pagination">
+        <a
+          href="?page=1&category={{ category }}&min_price={{ min_price }}&q={{ q }}&sort={{ sort }}"
+        >
+          Page 1
+        </a>
+
+        <span>Page {{ page }}</span>
+
+        <a
+          href="?page=2&category={{ category }}&min_price={{ min_price }}&q={{ q }}&sort={{ sort }}"
+        >
+          Page 2
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
